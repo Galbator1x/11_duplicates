@@ -19,4 +19,4 @@ def find_duplicates(folder_path):
 if __name__ == '__main__':
     folder_path = input('Enter the path to the folder: ')
     print('Found duplicates')
-    [print(file) for file in find_duplicates(folder_path)]
+    [print(full_file_name) for full_file_name in find_duplicates(folder_path)]
