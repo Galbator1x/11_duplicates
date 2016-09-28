@@ -10,12 +10,13 @@ def find_duplicates(folder_path):
 
     for file1, file2 in itertools.combinations(files_list, 2):
         fname1, fname2 = os.path.basename(file1), os.path.basename(file2)
-        if fname1 == fname2 and os.path.getsize(file1) == os.path.getsize(file2):
+        fsize1, fsize2 = os.path.getsize(file1), os.path.getsize(file2)
+        if fname1 == fname2 and fsize1 == fsize2:
             duplicates.extend([file1, file2])
     return duplicates
 
 
 if __name__ == '__main__':
-    folder_path = input('Введите путь до папки: ')
-    print('Найденные дубликаты')
+    folder_path = input('Enter the path to the folder: ')
+    print('Found duplicates')
     [print(file) for file in find_duplicates(folder_path)]
