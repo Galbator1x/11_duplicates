@@ -16,7 +16,7 @@ folder1/folder2/file2.txt
 folder1/folder2/folder3/file2.txt
 ```
 
-Reruirements
+Requirements
 ------------
 
 - Python >= 3.4
